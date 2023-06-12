@@ -47,7 +47,7 @@ export const SidebarData = [
   },
   {
     title: 'Bookings',
-    path: '/dashboard/bookings',
+    path: '/readBooking',
     icon: <FaIcons.FaCalendarCheck />,
     iconClosed: <RiIcons.RiArrowUpSFill />,
     iconOpened: <RiIcons.RiArrowDownSFill />,

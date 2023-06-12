@@ -1,6 +1,7 @@
 import React from 'react';
 import {Routes,Route,Navigate} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import AddUser from './components/AddUser';
 import EditUser from './components/EditUser';
 import UserDataTable from './components/UserDataTable';
@@ -8,6 +9,10 @@ import UserDataTable from './components/UserDataTable';
 import AddTour from './components/AddTour';
 import EditTour from './components/EditTour';
 import TourDataTable from './components/TourDataTable';
+
+import EditBooking from './components/EditBooking';
+import BookingDataTable from './components/BookingDataTable';
+
 import Sidebar from './Sidebar/Sidebar';
 import { Col, Row } from 'reactstrap';
 
@@ -26,6 +31,7 @@ function App() {
                 <Col lg="10">
                     <Routes>
                       <Route path="/" element={<Navigate to="/read" />} />
+
                       <Route exact path="/create" element={<AddUser/>}/>
                       <Route exact path="/read" element={<UserDataTable/>}/>
                       <Route path="/edit/:id" element={<EditUser/>}/>
@@ -33,6 +39,9 @@ function App() {
                       <Route exact path="/createTour" element={<AddTour/>}/>
                       <Route exact path="/readTour" element={<TourDataTable/>}/>
                       <Route path="/editTour/:id" element={<EditTour/>}/>
+
+                      <Route exact path="/readBooking" element={<BookingDataTable/>}/>
+                      <Route path="/editBooking/:id" element={<EditBooking/>}/>
                     </Routes>
                 </Col>
       </Row>

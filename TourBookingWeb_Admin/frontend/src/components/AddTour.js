@@ -143,40 +143,45 @@ const UserForm = () => {
             <br></br>
             <Form.Group  controlId="form.Description">
                 <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" value={enteredDesc} onChange={descChangeHandler} placeholder="Enter address" required/>
+                <Form.Control as="textarea" value={enteredDesc} onChange={descChangeHandler} placeholder="Enter description" required/>
             </Form.Group>
             <br></br>
             <Form.Group controlId="form.Itinerary">
                 <Form.Label>Itinerary</Form.Label>
-                <Form.Control as="textarea" value={enteredTourItinerary} onChange={tourItineraryChangeHandler} placeholder="Enter date of birth" required/>
+                <Form.Control as="textarea" value={enteredTourItinerary} onChange={tourItineraryChangeHandler} placeholder="Enter itinerary" required/>
             </Form.Group>
             <br></br>
             <Form.Group  controlId="form.Price">
                 <Form.Label>Price</Form.Label>
-                <Form.Control type="number" value={enteredPrice} onChange={priceChangeHandler} placeholder="Enter address" required/>
+                <Form.Control type="number" value={enteredPrice} onChange={priceChangeHandler} placeholder="Enter price" required/>
             </Form.Group>
             <br></br>
             <Form.Group controlId="form.StartDate">
                 <Form.Label>Start Date</Form.Label>
-                <Form.Control type="date" value={enteredStartDate} onChange={startDateChangeHandler} placeholder="Enter date of birth" required/>
+                <Form.Control type="date" value={enteredStartDate} onChange={startDateChangeHandler} placeholder="Enter start date" required/>
             </Form.Group>
             <br></br>
             <Form.Group  controlId="form.EndDate">
                 <Form.Label>End Date</Form.Label>
-                <Form.Control type="date" value={enteredEndDate} onChange={endDateChangeHandler} placeholder="Enter address" required/>
+                <Form.Control type="date" value={enteredEndDate} onChange={endDateChangeHandler} placeholder="Enter end date" required/>
             </Form.Group>
             <br></br>
             <Form.Group controlId="form.MaxGroupSize">
                 <Form.Label>Max Group Size</Form.Label>
-                <Form.Control type="number" value={enteredMaxGroupSize} onChange={maxGroupSizeChangeHandler} placeholder="Enter date of birth" required/>
+                <Form.Control type="number" value={enteredMaxGroupSize} onChange={maxGroupSizeChangeHandler} placeholder="Enter max group size" required/>
             </Form.Group>
             <br></br>
             <Form.Group controlId="form.Featured">
                 <Form.Label>Featured</Form.Label>
-                <Form.Control type="text" value={enteredFeatured} onChange={featuredChangeHandler} placeholder="Enter date of birth" required/>
+                {/* <Form.Control type="text" value={enteredFeatured} onChange={featuredChangeHandler} placeholder="Enter date of birth" required/> */}
+                <Form.Select value={enteredFeatured} onChange={featuredChangeHandler} aria-label="Default select example">
+                    <option>Select Option</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </Form.Select>
             </Form.Group>
             <br></br>
-            <Button type='submit'>Add User</Button>
+            <Button type='submit'>Add Tour</Button>
             &nbsp;&nbsp;&nbsp;
             <Button type='submit' onClick={()=>cancelHandler()}>Cancel</Button>
         </Form>
